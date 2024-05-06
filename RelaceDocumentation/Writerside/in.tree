@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="in"
+                 name="Instance Name"
+                 start-page="API-Calls.md">
+
+    <toc-element topic="API-Calls.md"/>
+    <toc-element topic="Assignment-Formatation.md"/>
+</instance-profile>

@@ -1,0 +1,335 @@
+<html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-none.min.js"></script><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .bordered-element {
+            border: 1px solid #c4c4c4;
+            overflow: hidden;
+        }
+        
+
+        .bordered-element-rounded {
+            border: 1px solid #c4c4c4;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .emphasis {
+            color: inherit;
+            font-weight: inherit;
+            font-style: italic;
+        }
+        
+
+        .flex {
+            display: flex;
+        }
+        
+
+        .header-row {
+            background: #e6e6e6;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .note {
+            background: rgba(77, 187, 95, .2);
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        .prompt {
+            flex-direction: row;
+            letter-spacing: .0015em;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+
+        .prompt-content {
+            padding: 15px;
+            overflow: hidden;
+            flex: 1 1 auto;
+        }
+        
+
+        .prompt-content-p p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prompt-icon {
+            flex: 0 0 auto;
+            margin-left: 15px;
+            margin-top: 15px;
+            fill: currentcolor;
+            width: 24px;
+            height: 24px;
+        }
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .tab-content {
+            padding: 16px;
+        }
+        
+        .tab-content > *  {
+            border: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+
+        .tab-title  {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+
+        .table-wrapper {
+            overflow: hidden;
+            box-sizing: border-box;
+            font: inherit;
+        }
+        
+
+        .tip {
+            background-color: rgba(25, 25, 28, .05);
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        
+
+        .warning {
+            background: rgba(244, 92, 74, .2);
+        }
+        </style></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-2113073118">Relace Documentation</a></div><div class="page">2</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-1393047970">Formation</a></div><div class="page">6</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-2113073118">Relace Documentation</h1><p id="-2113073118#-qny4e_3615">This is the documentation for the Rest API from Relace</p><section><h2 id="-2113073118#what-is-relace" data-toc="what-is-relace#API-Calls.md-what-is-relace">What is Relace?</h2><p id="-2113073118#-qny4e_3616">Relace is a Website that you can use to have all of your Homeworks at one place</p><p id="-2113073118#-qny4e_3617">You can find your current Front-End at relacexyz (<a href="https://relacexyz.duckdns.org">https://relacexyz.duckdns.org</a>)</p><section><h3 id="-2113073118#who-are-we" data-toc="who-are-we#API-Calls.md-who-are-we">Who are we?</h3><p id="-2113073118#-qny4e_3619">We are three students from the HTBLA Leonding and this a school project from us.</p><p id="-2113073118#-qny4e_3620">We are:</p><div class="table-wrapper detached"><table id="-2113073118#-qny4e_3621"><tr class="header-row" id="-2113073118#-qny4e_3622"><th id="-2113073118#-qny4e_3623"><p>Eros</p></th><th id="-2113073118#-qny4e_3624"><p>Leo</p></th><th id="-2113073118#-qny4e_3625"><p>Daniel</p></th></tr><tr class="" id="-2113073118#-qny4e_3626"><td id="-2113073118#-qny4e_3627"><p>mainly frontend</p></td><td id="-2113073118#-qny4e_3628"><p>mainly backend</p></td><td id="-2113073118#-qny4e_3629"><p>teams api</p></td></tr></table></div><blockquote class="prompt flex bordered-element-rounded note detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9zM10.5 7.5A1.5 1.5 0 1 0 12 6a1.5 1.5 0 0 0-1.5 1.5zm-.5 3.54v1h1V18h2v-6a.96.96 0 0 0-.96-.96z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p>If you want to use this API you will have to ask us for AccessAllowOrigin</p></div>
+</blockquote></section></section><section><h2 id="-2113073118#how-to-use-the-rest-api" data-toc="how-to-use-the-rest-api#API-Calls.md-how-to-use-the-rest-api">How to use the REST API</h2><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p>Parameters that are <b id="-2113073118#-qny4e_3632">bold</b> are required Parameters</p></div>
+</blockquote><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p>Parameters that are  are optional Parameters</p></div>
+</blockquote><div class="table-wrapper detached"><table id="-2113073118#-qny4e_3635"><tr class="header-row" id="-2113073118#-qny4e_3636"><th id="-2113073118#-qny4e_3637"><p>API call</p></th><th id="-2113073118#-qny4e_3638"><p>endpoint</p></th><th id="-2113073118#-qny4e_3639"><p>Parameters</p></th><th id="-2113073118#-qny4e_3640"><p>return values</p></th></tr><tr class="" id="-2113073118#-qny4e_3641"><td id="-2113073118#-qny4e_3642"><p>login</p></td><td id="-2113073118#-qny4e_3643"><p>/auth/login</p></td><td id="-2113073118#-qny4e_3644"><p><span class="control" id="-2113073118#-qny4e_3645">username</span> <span class="inline-code" id="-2113073118#-qny4e_3646">: String</span></p><p> <span class="control" id="-2113073118#-qny4e_3648">password</span> <span class="inline-code" id="-2113073118#-qny4e_3649">: String</span></p></td><td id="-2113073118#-qny4e_3650"><p>success <span class="inline-code" id="-2113073118#-qny4e_3651">: bool</span></p><p> message <span class="inline-code" id="-2113073118#-qny4e_3653">: String</span></p><p> jwt <span class="inline-code" id="-2113073118#-qny4e_3655">: String</span></p><p> refreshToken <span class="inline-code" id="-2113073118#-qny4e_3657">: String</span></p></td></tr><tr class="" id="-2113073118#-qny4e_3658"><td id="-2113073118#-qny4e_3659"><p>register</p></td><td id="-2113073118#-qny4e_3660"><p>/auth/register</p></td><td id="-2113073118#-qny4e_3661"><p><span class="control" id="-2113073118#-qny4e_3662">username</span> <span class="inline-code" id="-2113073118#-qny4e_3663">: String</span></p><p> <span class="control" id="-2113073118#-qny4e_3665">password</span> <span class="inline-code" id="-2113073118#-qny4e_3666">: String</span></p><p> <span class="control" id="-2113073118#-qny4e_3668">email</span> <span class="inline-code" id="-2113073118#-qny4e_3669">: String</span></p></td><td id="-2113073118#-qny4e_3670"><p>success <span class="inline-code" id="-2113073118#-qny4e_3671">: bool</span></p><p> message <span class="inline-code" id="-2113073118#-qny4e_3673">: String</span></p></td></tr><tr class="" id="-2113073118#-qny4e_3674"><td id="-2113073118#-qny4e_3675"><p>get assignments</p></td><td id="-2113073118#-qny4e_3676"><p>/a/get</p></td><td id="-2113073118#-qny4e_3677"><p><span class="control" id="-2113073118#-qny4e_3678">jwt</span> <span class="inline-code" id="-2113073118#-qny4e_3679">: String</span></p><p> <span class="emphasis" id="-2113073118#-qny4e_3681">count</span> <span class="inline-code" id="-2113073118#-qny4e_3682">: int</span> <span class="inline-code" id="-2113073118#-qny4e_3683">all</span></p><p> <span class="emphasis" id="-2113073118#-qny4e_3685">offset</span> <span class="inline-code" id="-2113073118#-qny4e_3686">: int</span> <span class="inline-code" id="-2113073118#-qny4e_3687">0</span></p><p> <span class="emphasis" id="-2113073118#-qny4e_3689">compact</span> <span class="inline-code" id="-2113073118#-qny4e_3690">: boolean</span> <span class="inline-code" id="-2113073118#-qny4e_3691">false</span></p><p> <span class="emphasis" id="-2113073118#-qny4e_3693">searchParams</span> <span class="inline-code" id="-2113073118#-qny4e_3694">: String</span> DEF: <span class="inline-code" id="-2113073118#-qny4e_3695">emtpy</span></p><p> <span class="emphasis" id="-2113073118#-qny4e_3697">course</span> <span class="inline-code" id="-2113073118#-qny4e_3698">: String</span> <span class="inline-code" id="-2113073118#-qny4e_3699">empty</span></p><p> <span class="emphasis" id="-2113073118#-qny4e_3701">after</span> <span class="inline-code" id="-2113073118#-qny4e_3702">: long</span> <span class="inline-code" id="-2113073118#-qny4e_3703">0</span></p><p> <span class="emphasis" id="-2113073118#-qny4e_3705">before</span> <span class="inline-code" id="-2113073118#-qny4e_3706">: long</span> <span class="inline-code" id="-2113073118#-qny4e_3707">unlimited</span></p><p><span class="emphasis" id="-2113073118#-qny4e_3709">order</span> <span class="inline-code" id="-2113073118#-qny4e_3710">: String</span> (asc or desc) <span class="inline-code" id="-2113073118#-qny4e_3711">desc</span></p></td><td id="-2113073118#-qny4e_3712"><p>success <span class="inline-code" id="-2113073118#-qny4e_3713">: bool</span></p><p> message <span class="inline-code" id="-2113073118#-qny4e_3715">: String</span></p><p> assignments (<a href="#-1393047970">Formation</a>) <span class="inline-code" id="-2113073118#-qny4e_3718">: Assignment[]</span></p></td></tr><tr class="" id="-2113073118#-qny4e_3719"><td id="-2113073118#-qny4e_3720"><p>set token</p></td><td id="-2113073118#-qny4e_3721"><p>/auth/tpapi/settoken</p></td><td id="-2113073118#-qny4e_3722"><p><span class="control" id="-2113073118#-qny4e_3723">jwt</span> <span class="inline-code" id="-2113073118#-qny4e_3724">: String</span></p><p> <span class="control" id="-2113073118#-qny4e_3726">token</span> <span class="inline-code" id="-2113073118#-qny4e_3727">: String</span></p><p> <span class="control" id="-2113073118#-qny4e_3729">key</span> <span class="inline-code" id="-2113073118#-qny4e_3730">: String</span></p><p><span class="control" id="-2113073118#-qny4e_3732">api</span> <span class="inline-code" id="-2113073118#-qny4e_3733">: String</span></p></td><td id="-2113073118#-qny4e_3734"><p>success <span class="inline-code" id="-2113073118#-qny4e_3735">: bool</span></p><p> message <span class="inline-code" id="-2113073118#-qny4e_3737">: String</span></p></td></tr><tr class="" id="-2113073118#-qny4e_3738"><td id="-2113073118#-qny4e_3739"><p>has token ?</p></td><td id="-2113073118#-qny4e_3740"><p>/auth/tpapi/hastoken</p></td><td id="-2113073118#-qny4e_3741"><p><span class="control" id="-2113073118#-qny4e_3742">jwt</span> <span class="inline-code" id="-2113073118#-qny4e_3743">: String</span></p><p> <span class="control" id="-2113073118#-qny4e_3745">api</span> <span class="inline-code" id="-2113073118#-qny4e_3746">: String</span></p></td><td id="-2113073118#-qny4e_3747"><p>success <span class="inline-code" id="-2113073118#-qny4e_3748">: bool</span></p><p> message <span class="inline-code" id="-2113073118#-qny4e_3750">: String</span></p></td></tr><tr class="" id="-2113073118#-qny4e_3751"><td id="-2113073118#-qny4e_3752"><p>load moodle assignments</p></td><td id="-2113073118#-qny4e_3753"><p>/a/loadmoodle</p></td><td id="-2113073118#-qny4e_3754"><p><span class="control" id="-2113073118#-qny4e_3755">jwt</span> <span class="inline-code" id="-2113073118#-qny4e_3756">: String</span></p><p> <span class="control" id="-2113073118#-qny4e_3758">key</span> <span class="inline-code" id="-2113073118#-qny4e_3759">: String</span></p></td><td id="-2113073118#-qny4e_3760"></td></tr></table></div><blockquote class="prompt flex bordered-element-rounded warning detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p>You have to put https://relacexyz.duckdns.org/api in front of every endpoint!</p></div>
+</blockquote></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-1393047970">Formation</h1><section><h2 id="-1393047970#assignment-formation" data-toc="assignment-formation#Assignment-Formatation.md-assignment-formation">Assignment Formation</h2><div id="-1393047970#-mul03o_111"><div class="detached" id="-1393047970#assignment-compact"><div class="tab-title"><div>Compact</div></div><div class="bordered-element tab-content"><div class="code-block detached" id="-1393047970#-mul03o_112"><pre><code class="language-none">id : int
+title : String
+deadline : int
+done : bool</code></pre></div></div></div><div class="detached" id="-1393047970#assignment-extended"><div class="tab-title"><div>Extended</div></div><div class="bordered-element tab-content"><div class="code-block detached" id="-1393047970#-mul03o_113"><pre><code class="language-none">id : int 
+title : String 
+deadline : int  
+done : bool 
+description : String 
+course : String 
+attachments : Attachments 
+linkToProvider : String</code></pre></div></div></div></div></section><section><h2 id="-1393047970#attachment-formation" data-toc="attachment-formation#Assignment-Formatation.md-attachment-formation">Attachment Formation</h2><div class="code-block detached" id="-1393047970#-mul03o_114"><pre><code class="language-none">name : String  
+link : String</code></pre></div></section></article></div></section></div></body></html>
