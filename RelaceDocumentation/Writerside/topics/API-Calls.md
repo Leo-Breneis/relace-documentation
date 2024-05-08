@@ -3,9 +3,9 @@ This is the documentation for the Rest API from Relace
 
 ## What is Relace?
 
-Relace is a website where you can see all of your homeworks at one place
+Relace is a website where you can see all of your homeworks in one place
 
-You can find your current frontend at [relacexyz](https://relacexyz.duckdns.org)
+You can find our current frontend at [relacexyz](https://relacexyz.duckdns.org)
 
 ### Who are we?
 
@@ -13,19 +13,19 @@ We are three students from the HTBLA Leonding and this a school project from us.
 
 We are:
 
-| name                   | Eros            | Leo             | Daniel    |
-|------------------------|-----------------|-----------------|-----------|
-| area of responsibility | mainly frontend | mainly backend  | teams api |
-| discord                | 178laflame178   | opfisoftlover69 | -         |
+| name    | area of responsibility | discord         |
+|---------|------------------------|-----------------|
+| Eros    | mainly frontend        | 178laflame178   |
+| Leo     | mainly backend         | opfisoftlover69 |
+| Daniel  | teams api              | -               |
 
 <note> If you want to use this API you will have to ask us for AccessAllowOrigin</note>
 
 
 ## How to use the REST API
 
-<tip>Parameters that are <b>bold</b> are required Parameters</tip>
-<tip>Parameters that are <i>cursive</i> are optional Parameters</tip>
-
+<tip>Parameters that are <b>bold</b> are required Parameters <> Parameters that are <i>cursive</i> are optional Parameters</tip>
+<warning>You have to put https://relacexyz.duckdns.org/api in front of every endpoint!</warning>
 
 | API call                | endpoint             | Parameters                                                                                                                                                                                                                                                                                         | return values                                                                                                   |
 |-------------------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -38,4 +38,3 @@ We are:
 | get all courses         | /c/get               | **jwt** `: String`                                                                                                                                                                                                                                                                                 | success `: bool`<br/> message `: String`<br/> [courses](Assignment-Formatation.md) `: Courses`                  |
 | get by id               | /a/getbyid/          | **jwt** `: String`<br/> **id** `: int`                                                                                                                                                                                                                                                             | success `: bool`<br/> message `: String`<br/> [assignment](Assignment-Formatation.md) `: Assignment` (Extended) |
 
-<warning>You have to put https://relacexyz.duckdns.org/api in front of every endpoint!</warning>
