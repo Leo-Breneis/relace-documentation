@@ -18,7 +18,7 @@ We are:
 | area of responsibility | mainly frontend | mainly backend  | teams api     |
 | discord                | 178laflame178   | opfisoftlover69 | daniel000159  |
 
-<note> If you want to use this API you will have to ask us for AccessAllowOrigin </note>
+<note> If you want to use this API you will have to ask us (AccessAllowOrigin) </note>
 
 
 ## How to use the REST API
